@@ -7,21 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9135477921A1C4A900F509DF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477421A1C4A900F509DF /* UIViewExtensions.swift */; };
+		9135477A21A1C4A900F509DF /* InspectableTextAttr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477521A1C4A900F509DF /* InspectableTextAttr.swift */; };
+		9135477B21A1C4A900F509DF /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477621A1C4A900F509DF /* UIViewControllerExtensions.swift */; };
+		9135477C21A1C4A900F509DF /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477721A1C4A900F509DF /* HelperFunctions.swift */; };
+		9135477D21A1C4A900F509DF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477821A1C4A900F509DF /* StringExtensions.swift */; };
 		91A0A49621A1BE290044C45A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A49521A1BE290044C45A /* AppDelegate.swift */; };
-		91A0A49821A1BE290044C45A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A49721A1BE290044C45A /* ViewController.swift */; };
+		91A0A49821A1BE290044C45A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A49721A1BE290044C45A /* LoginViewController.swift */; };
 		91A0A49B21A1BE290044C45A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A49921A1BE290044C45A /* Main.storyboard */; };
 		91A0A49D21A1BE2B0044C45A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A49C21A1BE2B0044C45A /* Assets.xcassets */; };
 		91A0A4A021A1BE2B0044C45A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A49E21A1BE2B0044C45A /* LaunchScreen.storyboard */; };
+		91A0A4AD21A1C0CF0044C45A /* Soleil-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A4AA21A1C0CF0044C45A /* Soleil-Regular.ttf */; };
+		91A0A4AE21A1C0CF0044C45A /* Soleil-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A4AB21A1C0CF0044C45A /* Soleil-Light.ttf */; };
+		91A0A4AF21A1C0CF0044C45A /* Soleil-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A4AC21A1C0CF0044C45A /* Soleil-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9135477421A1C4A900F509DF /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		9135477521A1C4A900F509DF /* InspectableTextAttr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspectableTextAttr.swift; sourceTree = "<group>"; };
+		9135477621A1C4A900F509DF /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		9135477721A1C4A900F509DF /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		9135477821A1C4A900F509DF /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		91A0A49221A1BE290044C45A /* tix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A0A49521A1BE290044C45A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		91A0A49721A1BE290044C45A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		91A0A49721A1BE290044C45A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		91A0A49A21A1BE290044C45A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91A0A49C21A1BE2B0044C45A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91A0A49F21A1BE2B0044C45A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91A0A4A121A1BE2B0044C45A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91A0A4AA21A1C0CF0044C45A /* Soleil-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Soleil-Regular.ttf"; sourceTree = "<group>"; };
+		91A0A4AB21A1C0CF0044C45A /* Soleil-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Soleil-Light.ttf"; sourceTree = "<group>"; };
+		91A0A4AC21A1C0CF0044C45A /* Soleil-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Soleil-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +51,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9135477321A1C47600F509DF /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				9135477721A1C4A900F509DF /* HelperFunctions.swift */,
+				9135477521A1C4A900F509DF /* InspectableTextAttr.swift */,
+				9135477821A1C4A900F509DF /* StringExtensions.swift */,
+				9135477621A1C4A900F509DF /* UIViewControllerExtensions.swift */,
+				9135477421A1C4A900F509DF /* UIViewExtensions.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
 		91A0A48921A1BE290044C45A = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +82,26 @@
 		91A0A49421A1BE290044C45A /* tix */ = {
 			isa = PBXGroup;
 			children = (
+				9135477321A1C47600F509DF /* Supporting */,
+				91A0A4A921A1C0A70044C45A /* Fonts */,
 				91A0A49521A1BE290044C45A /* AppDelegate.swift */,
-				91A0A49721A1BE290044C45A /* ViewController.swift */,
+				91A0A49721A1BE290044C45A /* LoginViewController.swift */,
 				91A0A49921A1BE290044C45A /* Main.storyboard */,
 				91A0A49C21A1BE2B0044C45A /* Assets.xcassets */,
 				91A0A49E21A1BE2B0044C45A /* LaunchScreen.storyboard */,
 				91A0A4A121A1BE2B0044C45A /* Info.plist */,
 			);
 			path = tix;
+			sourceTree = "<group>";
+		};
+		91A0A4A921A1C0A70044C45A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				91A0A4AC21A1C0CF0044C45A /* Soleil-Bold.ttf */,
+				91A0A4AB21A1C0CF0044C45A /* Soleil-Light.ttf */,
+				91A0A4AA21A1C0CF0044C45A /* Soleil-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +163,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				91A0A4A021A1BE2B0044C45A /* LaunchScreen.storyboard in Resources */,
+				91A0A4AE21A1C0CF0044C45A /* Soleil-Light.ttf in Resources */,
+				91A0A4AD21A1C0CF0044C45A /* Soleil-Regular.ttf in Resources */,
 				91A0A49D21A1BE2B0044C45A /* Assets.xcassets in Resources */,
 				91A0A49B21A1BE290044C45A /* Main.storyboard in Resources */,
+				91A0A4AF21A1C0CF0044C45A /* Soleil-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91A0A49821A1BE290044C45A /* ViewController.swift in Sources */,
+				91A0A49821A1BE290044C45A /* LoginViewController.swift in Sources */,
+				9135477921A1C4A900F509DF /* UIViewExtensions.swift in Sources */,
+				9135477B21A1C4A900F509DF /* UIViewControllerExtensions.swift in Sources */,
+				9135477D21A1C4A900F509DF /* StringExtensions.swift in Sources */,
+				9135477A21A1C4A900F509DF /* InspectableTextAttr.swift in Sources */,
 				91A0A49621A1BE290044C45A /* AppDelegate.swift in Sources */,
+				9135477C21A1C4A900F509DF /* HelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
