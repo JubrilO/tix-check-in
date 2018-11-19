@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DE8C8E0621047C9932A059B /* Pods_tix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8D881DD402FEC941E3D65F /* Pods_tix.framework */; };
+		910145B221A1D74800B19873 /* ApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145B121A1D74800B19873 /* ApolloClient.swift */; };
+		910145B421A1D83E00B19873 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145B321A1D83E00B19873 /* APIConstants.swift */; };
+		910145B621A1D92C00B19873 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145B521A1D92C00B19873 /* StringConstants.swift */; };
+		910145B821A1DA0F00B19873 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145B721A1DA0F00B19873 /* Coordinator.swift */; };
+		910145BB21A1DA5700B19873 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145BA21A1DA5700B19873 /* MainCoordinator.swift */; };
+		910145BD21A1DC5B00B19873 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145BC21A1DC5B00B19873 /* Storyboardable.swift */; };
+		910145BF21A1E65800B19873 /* TixTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145BE21A1E65800B19873 /* TixTextField.swift */; };
+		910145C121A2018B00B19873 /* TixButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145C021A2018B00B19873 /* TixButton.swift */; };
+		910145C421A2036300B19873 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145C321A2036300B19873 /* EventsViewController.swift */; };
+		910145C621A2037400B19873 /* EventsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145C521A2037400B19873 /* EventsCoordinator.swift */; };
+		910145C821A2066400B19873 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145C721A2066400B19873 /* ShadowView.swift */; };
+		910145CA21A206E700B19873 /* Home.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 910145C921A206E700B19873 /* Home.graphql */; };
 		9135477921A1C4A900F509DF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477421A1C4A900F509DF /* UIViewExtensions.swift */; };
 		9135477A21A1C4A900F509DF /* InspectableTextAttr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477521A1C4A900F509DF /* InspectableTextAttr.swift */; };
 		9135477B21A1C4A900F509DF /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477621A1C4A900F509DF /* UIViewControllerExtensions.swift */; };
@@ -20,9 +33,24 @@
 		91A0A4AD21A1C0CF0044C45A /* Soleil-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A4AA21A1C0CF0044C45A /* Soleil-Regular.ttf */; };
 		91A0A4AE21A1C0CF0044C45A /* Soleil-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A4AB21A1C0CF0044C45A /* Soleil-Light.ttf */; };
 		91A0A4AF21A1C0CF0044C45A /* Soleil-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A4AC21A1C0CF0044C45A /* Soleil-Bold.ttf */; };
+		91CB82F121A1CE6A00B59744 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CB82F021A1CE6A00B59744 /* API.swift */; };
+		91CB82F421A1CFC700B59744 /* Auth.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 91CB82F321A1CFC700B59744 /* Auth.graphql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C8D881DD402FEC941E3D65F /* Pods_tix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		910145B121A1D74800B19873 /* ApolloClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloClient.swift; sourceTree = "<group>"; };
+		910145B321A1D83E00B19873 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		910145B521A1D92C00B19873 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		910145B721A1DA0F00B19873 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		910145BA21A1DA5700B19873 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		910145BC21A1DC5B00B19873 /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
+		910145BE21A1E65800B19873 /* TixTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TixTextField.swift; sourceTree = "<group>"; };
+		910145C021A2018B00B19873 /* TixButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TixButton.swift; sourceTree = "<group>"; };
+		910145C321A2036300B19873 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		910145C521A2037400B19873 /* EventsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCoordinator.swift; sourceTree = "<group>"; };
+		910145C721A2066400B19873 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		910145C921A206E700B19873 /* Home.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Home.graphql; sourceTree = "<group>"; };
 		9135477421A1C4A900F509DF /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		9135477521A1C4A900F509DF /* InspectableTextAttr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspectableTextAttr.swift; sourceTree = "<group>"; };
 		9135477621A1C4A900F509DF /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
@@ -38,6 +66,11 @@
 		91A0A4AA21A1C0CF0044C45A /* Soleil-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Soleil-Regular.ttf"; sourceTree = "<group>"; };
 		91A0A4AB21A1C0CF0044C45A /* Soleil-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Soleil-Light.ttf"; sourceTree = "<group>"; };
 		91A0A4AC21A1C0CF0044C45A /* Soleil-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Soleil-Bold.ttf"; sourceTree = "<group>"; };
+		91CB82EF21A1CDE700B59744 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = schema.json; path = /Users/jubril/Dev/tix/tix/schema.json; sourceTree = "<absolute>"; };
+		91CB82F021A1CE6A00B59744 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = tix/API.swift; sourceTree = "<group>"; };
+		91CB82F321A1CFC700B59744 /* Auth.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Auth.graphql; sourceTree = "<group>"; };
+		B32015D9018BD748B7BC6E9E /* Pods-tix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tix.release.xcconfig"; path = "Pods/Target Support Files/Pods-tix/Pods-tix.release.xcconfig"; sourceTree = "<group>"; };
+		CC240E958C6813251DB2DADE /* Pods-tix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tix/Pods-tix.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,12 +78,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE8C8E0621047C9932A059B /* Pods_tix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		501EE8B4A616F8E67B3CF856 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC240E958C6813251DB2DADE /* Pods-tix.debug.xcconfig */,
+				B32015D9018BD748B7BC6E9E /* Pods-tix.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		910145B021A1D73500B19873 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				910145B121A1D74800B19873 /* ApolloClient.swift */,
+				910145B321A1D83E00B19873 /* APIConstants.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		910145B921A1DA2D00B19873 /* Auth Scene */ = {
+			isa = PBXGroup;
+			children = (
+				91A0A49721A1BE290044C45A /* LoginViewController.swift */,
+				910145BA21A1DA5700B19873 /* MainCoordinator.swift */,
+				910145BE21A1E65800B19873 /* TixTextField.swift */,
+				910145C021A2018B00B19873 /* TixButton.swift */,
+			);
+			path = "Auth Scene";
+			sourceTree = "<group>";
+		};
+		910145C221A202DE00B19873 /* Home Scene */ = {
+			isa = PBXGroup;
+			children = (
+				910145C321A2036300B19873 /* EventsViewController.swift */,
+				910145C521A2037400B19873 /* EventsCoordinator.swift */,
+				910145C721A2066400B19873 /* ShadowView.swift */,
+			);
+			path = "Home Scene";
+			sourceTree = "<group>";
+		};
 		9135477321A1C47600F509DF /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +132,7 @@
 				9135477821A1C4A900F509DF /* StringExtensions.swift */,
 				9135477621A1C4A900F509DF /* UIViewControllerExtensions.swift */,
 				9135477421A1C4A900F509DF /* UIViewExtensions.swift */,
+				910145B521A1D92C00B19873 /* StringConstants.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -66,8 +140,11 @@
 		91A0A48921A1BE290044C45A = {
 			isa = PBXGroup;
 			children = (
+				91CB82F021A1CE6A00B59744 /* API.swift */,
 				91A0A49421A1BE290044C45A /* tix */,
 				91A0A49321A1BE290044C45A /* Products */,
+				501EE8B4A616F8E67B3CF856 /* Pods */,
+				BD3B382B4D409BE92D7D1106 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,10 +159,16 @@
 		91A0A49421A1BE290044C45A /* tix */ = {
 			isa = PBXGroup;
 			children = (
+				910145C221A202DE00B19873 /* Home Scene */,
+				910145B921A1DA2D00B19873 /* Auth Scene */,
+				910145B021A1D73500B19873 /* Networking */,
 				9135477321A1C47600F509DF /* Supporting */,
 				91A0A4A921A1C0A70044C45A /* Fonts */,
+				91CB82F221A1CFA700B59744 /* GraphQL */,
+				91CB82EF21A1CDE700B59744 /* schema.json */,
+				910145BC21A1DC5B00B19873 /* Storyboardable.swift */,
 				91A0A49521A1BE290044C45A /* AppDelegate.swift */,
-				91A0A49721A1BE290044C45A /* LoginViewController.swift */,
+				910145B721A1DA0F00B19873 /* Coordinator.swift */,
 				91A0A49921A1BE290044C45A /* Main.storyboard */,
 				91A0A49C21A1BE2B0044C45A /* Assets.xcassets */,
 				91A0A49E21A1BE2B0044C45A /* LaunchScreen.storyboard */,
@@ -104,6 +187,23 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		91CB82F221A1CFA700B59744 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				91CB82F321A1CFC700B59744 /* Auth.graphql */,
+				910145C921A206E700B19873 /* Home.graphql */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		BD3B382B4D409BE92D7D1106 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C8D881DD402FEC941E3D65F /* Pods_tix.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -111,9 +211,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91A0A4A421A1BE2B0044C45A /* Build configuration list for PBXNativeTarget "tix" */;
 			buildPhases = (
+				9D57217F99A354101A0F04DA /* [CP] Check Pods Manifest.lock */,
+				91CB82EE21A1CC5D00B59744 /* Generate Apollo GraphQL API */,
 				91A0A48E21A1BE290044C45A /* Sources */,
 				91A0A48F21A1BE290044C45A /* Frameworks */,
 				91A0A49021A1BE290044C45A /* Resources */,
+				DAE86204B365A9B84B1729B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,8 +267,10 @@
 			files = (
 				91A0A4A021A1BE2B0044C45A /* LaunchScreen.storyboard in Resources */,
 				91A0A4AE21A1C0CF0044C45A /* Soleil-Light.ttf in Resources */,
+				910145CA21A206E700B19873 /* Home.graphql in Resources */,
 				91A0A4AD21A1C0CF0044C45A /* Soleil-Regular.ttf in Resources */,
 				91A0A49D21A1BE2B0044C45A /* Assets.xcassets in Resources */,
+				91CB82F421A1CFC700B59744 /* Auth.graphql in Resources */,
 				91A0A49B21A1BE290044C45A /* Main.storyboard in Resources */,
 				91A0A4AF21A1C0CF0044C45A /* Soleil-Bold.ttf in Resources */,
 			);
@@ -173,17 +278,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		91CB82EE21A1CC5D00B59744 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-cli.sh codegen:generate --queries=\"$(find . -name '*.graphql')\" --schema=schema.json API.swift\n";
+		};
+		9D57217F99A354101A0F04DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tix-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAE86204B365A9B84B1729B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-tix/Pods-tix-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftValidator/SwiftValidator.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftValidator.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tix/Pods-tix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		91A0A48E21A1BE290044C45A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				91A0A49821A1BE290044C45A /* LoginViewController.swift in Sources */,
+				910145B621A1D92C00B19873 /* StringConstants.swift in Sources */,
+				910145BF21A1E65800B19873 /* TixTextField.swift in Sources */,
+				910145C421A2036300B19873 /* EventsViewController.swift in Sources */,
+				910145BD21A1DC5B00B19873 /* Storyboardable.swift in Sources */,
 				9135477921A1C4A900F509DF /* UIViewExtensions.swift in Sources */,
+				910145B221A1D74800B19873 /* ApolloClient.swift in Sources */,
 				9135477B21A1C4A900F509DF /* UIViewControllerExtensions.swift in Sources */,
 				9135477D21A1C4A900F509DF /* StringExtensions.swift in Sources */,
 				9135477A21A1C4A900F509DF /* InspectableTextAttr.swift in Sources */,
+				910145B421A1D83E00B19873 /* APIConstants.swift in Sources */,
+				910145C621A2037400B19873 /* EventsCoordinator.swift in Sources */,
+				910145B821A1DA0F00B19873 /* Coordinator.swift in Sources */,
+				910145C121A2018B00B19873 /* TixButton.swift in Sources */,
 				91A0A49621A1BE290044C45A /* AppDelegate.swift in Sources */,
+				910145BB21A1DA5700B19873 /* MainCoordinator.swift in Sources */,
+				91CB82F121A1CE6A00B59744 /* API.swift in Sources */,
+				910145C821A2066400B19873 /* ShadowView.swift in Sources */,
 				9135477C21A1C4A900F509DF /* HelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +508,7 @@
 		};
 		91A0A4A521A1BE2B0044C45A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC240E958C6813251DB2DADE /* Pods-tix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -346,6 +527,7 @@
 		};
 		91A0A4A621A1BE2B0044C45A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B32015D9018BD748B7BC6E9E /* Pods-tix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

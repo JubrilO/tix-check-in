@@ -1,0 +1,12 @@
+query GetEvents {
+    currentUser {
+        events(last: 30) {
+            edges {
+                node{
+                    title
+                    startDate
+                }
+            }
+        }
+    }
+}

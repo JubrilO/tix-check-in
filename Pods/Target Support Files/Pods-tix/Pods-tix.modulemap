@@ -1,0 +1,6 @@
+framework module Pods_tix {
+  umbrella header "Pods-tix-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -27,29 +27,9 @@ extension UIViewController {
     
     func displayErrorModal(error: String) {
    
-//        let errorModal = ErrorModal()
-//        let window = UIApplication.shared.keyWindow
-//        let topPadding = window!.safeAreaInsets.top
-//        let modalSize = CGSize(width: 63 + error.width(withConstrainedHeight: 14, font: errorModal.errorLabel.font), height: 40)
-//        let x = (view.frame.size.width - modalSize.width)/2
-//        errorModal.frame = CGRect(origin: CGPoint(x: x, y: -57 + topPadding), size: modalSize)
-//        errorModal.errorLabel.text = error
-//        view.addSubview(errorModal)
-//        errorModal.alpha = 0
-//        errorModal.animate(inParallel: [
-//            .fadeIn(),
-//            .move(byX: 0, y: 57 + topPadding)
-//            ])
-//
-//        delay(3){
-//            errorModal.animate(inParallel: [
-//                .fadeOut(),
-//                .move(byX: 0, y: -(57 + topPadding))
-//                ]).perform {
-//                    errorModal.removeFromSuperview()
-//            }
-//        }
-        //    }}
-        
+        let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "Okay", style: .default)
+        alertController.addAction(dismissAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }
