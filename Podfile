@@ -7,6 +7,7 @@ target 'tix' do
 
   # Pods for tix
 pod 'Locksmith'
+pod 'QRCodeReader.swift', '~> 9.0.1'
 pod 'IQKeyboardManagerSwift'
 pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :branch => 'master'
 	pod 'Apollo'

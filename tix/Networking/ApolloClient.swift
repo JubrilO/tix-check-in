@@ -8,15 +8,19 @@
 import Apollo
 import Locksmith
 
-let apolloClient: ApolloClient = {
-    let configuration = URLSessionConfiguration.default
-    let url = URL(string: APIConstants.GraphQLURL)!
-    if let auth = Locksmith.loadDataForUserAccount(userAccount: Constants.TixUser)?["token"] as? String {
-        configuration.httpAdditionalHeaders = ["Authorization": "Bearer " + auth]
-        return ApolloClient(networkTransport: HTTPNetworkTransport(url: url, configuration: configuration))
-    }
-    else {
-        print("Sign in user")
-        return ApolloClient(url: url)
-    }
-}()
+class ApolloManager {
+    //static let shared = ApolloManager()
+    
+    let apolloClient: ApolloClient = {
+        let configuration = URLSessionConfiguration.default
+        let url = URL(string: APIConstants.GraphQLURL)!
+        if let auth = Locksmith.loadDataForUserAccount(userAccount: Constants.TixUser)?["token"] as? String {
+            configuration.httpAdditionalHeaders = ["Authorization": "Bearer " + auth]
+            return ApolloClient(networkTransport: HTTPNetworkTransport(url: url, configuration: configuration))
+        }
+        else {
+            print("Sign in user")
+            return ApolloClient(url: url)
+        }
+    }()
+}

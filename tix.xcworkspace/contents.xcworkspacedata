@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/jubril/Dev/tix/tix/schema.json">
-   </FileRef>
-   <FileRef
       location = "group:tix.xcodeproj">
    </FileRef>
    <FileRef

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Locksmith
+import Apollo
 
 class MainCoordinator: Coordinator {
     var navigationController: UINavigationController
@@ -25,6 +26,9 @@ class MainCoordinator: Coordinator {
     
     func startEventsCoordinator(animated: Bool) {
         print("User is signed in")
+        let eventsCoordinator = EventsCoordinator(navVC: navigationController)
+        eventsCoordinator.start()
+
     }
     
     func presentLoginScene() {
@@ -37,7 +41,7 @@ class MainCoordinator: Coordinator {
     func signInUser(email: String, password: String) {
         let signInMutation = SignInMutation(email: email, password: password)
         print("Making call")
-        apolloClient.perform(mutation: signInMutation){ [weak self]
+        ApolloManager().apolloClient.perform(mutation: signInMutation){ [weak self]
             result, error in
             print("Completed call")
             guard error == nil else {
@@ -46,15 +50,13 @@ class MainCoordinator: Coordinator {
                 return
             }
             guard result?.errors == nil else {
-                var string = ""
-                for graphQLError in result!.errors! {
-                     string = string + graphQLError.localizedDescription + ". "
-                }
                 self?.loginVC?.hideActivityIndicator()
-                self?.loginVC?.displayErrorModal(error: string)
+                self?.loginVC?.displayErrorModal(error: getGraphQLErrorString(result!.errors!))
                 return
             }
             guard let token = result?.data?.signIn?.authenticationToken else {
+                self?.loginVC?.hideActivityIndicator()
+                self?.loginVC?.displayErrorModal(error: "Could not retreive token")
                 return
             }
             try! Locksmith.updateData(data: ["token" : token], forUserAccount: Constants.TixUser)
@@ -63,17 +65,19 @@ class MainCoordinator: Coordinator {
     }
     
     private func isUserAuthenticated() -> Bool {
-        if let tokenDict = Locksmith.loadDataForUserAccount(userAccount: Constants.TixUser) {
-            guard let _ = tokenDict["token"] as? String else {
-                return true
-            }
-            return false
-            
+        if let _ = Locksmith.loadDataForUserAccount(userAccount: Constants.TixUser)?["token"] as? String{
+            return true
         }
         else {
             return false
         }
     }
-    
-    
+}
+
+func getGraphQLErrorString(_ graphQLErrors: [GraphQLError]) -> String {
+    var string = ""
+    for graphQLError in graphQLErrors {
+        string = string + graphQLError.localizedDescription + ". "
+    }
+    return string
 }

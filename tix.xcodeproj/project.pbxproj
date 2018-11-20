@@ -20,6 +20,12 @@
 		910145C621A2037400B19873 /* EventsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145C521A2037400B19873 /* EventsCoordinator.swift */; };
 		910145C821A2066400B19873 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145C721A2066400B19873 /* ShadowView.swift */; };
 		910145CA21A206E700B19873 /* Home.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 910145C921A206E700B19873 /* Home.graphql */; };
+		910145CC21A238B800B19873 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145CB21A238B800B19873 /* EventTableViewCell.swift */; };
+		910145CE21A23CDA00B19873 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145CD21A23CDA00B19873 /* DateHelper.swift */; };
+		910145D121A250C600B19873 /* CheckOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145D021A250C600B19873 /* CheckOrderViewController.swift */; };
+		910145D321A2657600B19873 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145D221A2657600B19873 /* CheckInViewController.swift */; };
+		910145D521A26A0900B19873 /* CheckIn.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 910145D421A26A0900B19873 /* CheckIn.graphql */; };
+		911721BD21A34CFE00BD335A /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 911721BC21A34CFE00BD335A /* schema.json */; };
 		9135477921A1C4A900F509DF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477421A1C4A900F509DF /* UIViewExtensions.swift */; };
 		9135477A21A1C4A900F509DF /* InspectableTextAttr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477521A1C4A900F509DF /* InspectableTextAttr.swift */; };
 		9135477B21A1C4A900F509DF /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477621A1C4A900F509DF /* UIViewControllerExtensions.swift */; };
@@ -33,7 +39,7 @@
 		91A0A4AD21A1C0CF0044C45A /* Soleil-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A4AA21A1C0CF0044C45A /* Soleil-Regular.ttf */; };
 		91A0A4AE21A1C0CF0044C45A /* Soleil-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A4AB21A1C0CF0044C45A /* Soleil-Light.ttf */; };
 		91A0A4AF21A1C0CF0044C45A /* Soleil-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A4AC21A1C0CF0044C45A /* Soleil-Bold.ttf */; };
-		91CB82F121A1CE6A00B59744 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CB82F021A1CE6A00B59744 /* API.swift */; };
+		91B05D9D21A2DA7E00C05274 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B05D9C21A2DA7E00C05274 /* API.swift */; };
 		91CB82F421A1CFC700B59744 /* Auth.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 91CB82F321A1CFC700B59744 /* Auth.graphql */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +57,12 @@
 		910145C521A2037400B19873 /* EventsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCoordinator.swift; sourceTree = "<group>"; };
 		910145C721A2066400B19873 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		910145C921A206E700B19873 /* Home.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Home.graphql; sourceTree = "<group>"; };
+		910145CB21A238B800B19873 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		910145CD21A23CDA00B19873 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		910145D021A250C600B19873 /* CheckOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOrderViewController.swift; sourceTree = "<group>"; };
+		910145D221A2657600B19873 /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
+		910145D421A26A0900B19873 /* CheckIn.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CheckIn.graphql; sourceTree = "<group>"; };
+		911721BC21A34CFE00BD335A /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = schema.json; path = tix/schema.json; sourceTree = SOURCE_ROOT; };
 		9135477421A1C4A900F509DF /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		9135477521A1C4A900F509DF /* InspectableTextAttr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspectableTextAttr.swift; sourceTree = "<group>"; };
 		9135477621A1C4A900F509DF /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
@@ -66,8 +78,7 @@
 		91A0A4AA21A1C0CF0044C45A /* Soleil-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Soleil-Regular.ttf"; sourceTree = "<group>"; };
 		91A0A4AB21A1C0CF0044C45A /* Soleil-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Soleil-Light.ttf"; sourceTree = "<group>"; };
 		91A0A4AC21A1C0CF0044C45A /* Soleil-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Soleil-Bold.ttf"; sourceTree = "<group>"; };
-		91CB82EF21A1CDE700B59744 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = schema.json; path = /Users/jubril/Dev/tix/tix/schema.json; sourceTree = "<absolute>"; };
-		91CB82F021A1CE6A00B59744 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = tix/API.swift; sourceTree = "<group>"; };
+		91B05D9C21A2DA7E00C05274 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = tix/API.swift; sourceTree = "<group>"; };
 		91CB82F321A1CFC700B59744 /* Auth.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Auth.graphql; sourceTree = "<group>"; };
 		B32015D9018BD748B7BC6E9E /* Pods-tix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tix.release.xcconfig"; path = "Pods/Target Support Files/Pods-tix/Pods-tix.release.xcconfig"; sourceTree = "<group>"; };
 		CC240E958C6813251DB2DADE /* Pods-tix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tix/Pods-tix.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,14 +125,24 @@
 			path = "Auth Scene";
 			sourceTree = "<group>";
 		};
-		910145C221A202DE00B19873 /* Home Scene */ = {
+		910145C221A202DE00B19873 /* Events Scene */ = {
 			isa = PBXGroup;
 			children = (
 				910145C321A2036300B19873 /* EventsViewController.swift */,
 				910145C521A2037400B19873 /* EventsCoordinator.swift */,
+				910145CB21A238B800B19873 /* EventTableViewCell.swift */,
 				910145C721A2066400B19873 /* ShadowView.swift */,
 			);
-			path = "Home Scene";
+			path = "Events Scene";
+			sourceTree = "<group>";
+		};
+		910145CF21A24F8600B19873 /* Check-in Scene */ = {
+			isa = PBXGroup;
+			children = (
+				910145D021A250C600B19873 /* CheckOrderViewController.swift */,
+				910145D221A2657600B19873 /* CheckInViewController.swift */,
+			);
+			path = "Check-in Scene";
 			sourceTree = "<group>";
 		};
 		9135477321A1C47600F509DF /* Supporting */ = {
@@ -133,6 +154,7 @@
 				9135477621A1C4A900F509DF /* UIViewControllerExtensions.swift */,
 				9135477421A1C4A900F509DF /* UIViewExtensions.swift */,
 				910145B521A1D92C00B19873 /* StringConstants.swift */,
+				910145CD21A23CDA00B19873 /* DateHelper.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -140,7 +162,7 @@
 		91A0A48921A1BE290044C45A = {
 			isa = PBXGroup;
 			children = (
-				91CB82F021A1CE6A00B59744 /* API.swift */,
+				91B05D9C21A2DA7E00C05274 /* API.swift */,
 				91A0A49421A1BE290044C45A /* tix */,
 				91A0A49321A1BE290044C45A /* Products */,
 				501EE8B4A616F8E67B3CF856 /* Pods */,
@@ -159,13 +181,14 @@
 		91A0A49421A1BE290044C45A /* tix */ = {
 			isa = PBXGroup;
 			children = (
-				910145C221A202DE00B19873 /* Home Scene */,
+				911721BC21A34CFE00BD335A /* schema.json */,
+				910145CF21A24F8600B19873 /* Check-in Scene */,
+				910145C221A202DE00B19873 /* Events Scene */,
 				910145B921A1DA2D00B19873 /* Auth Scene */,
 				910145B021A1D73500B19873 /* Networking */,
 				9135477321A1C47600F509DF /* Supporting */,
 				91A0A4A921A1C0A70044C45A /* Fonts */,
 				91CB82F221A1CFA700B59744 /* GraphQL */,
-				91CB82EF21A1CDE700B59744 /* schema.json */,
 				910145BC21A1DC5B00B19873 /* Storyboardable.swift */,
 				91A0A49521A1BE290044C45A /* AppDelegate.swift */,
 				910145B721A1DA0F00B19873 /* Coordinator.swift */,
@@ -192,6 +215,7 @@
 			children = (
 				91CB82F321A1CFC700B59744 /* Auth.graphql */,
 				910145C921A206E700B19873 /* Home.graphql */,
+				910145D421A26A0900B19873 /* CheckIn.graphql */,
 			);
 			path = GraphQL;
 			sourceTree = "<group>";
@@ -265,11 +289,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				910145D521A26A0900B19873 /* CheckIn.graphql in Resources */,
 				91A0A4A021A1BE2B0044C45A /* LaunchScreen.storyboard in Resources */,
 				91A0A4AE21A1C0CF0044C45A /* Soleil-Light.ttf in Resources */,
 				910145CA21A206E700B19873 /* Home.graphql in Resources */,
 				91A0A4AD21A1C0CF0044C45A /* Soleil-Regular.ttf in Resources */,
 				91A0A49D21A1BE2B0044C45A /* Assets.xcassets in Resources */,
+				911721BD21A34CFE00BD335A /* schema.json in Resources */,
 				91CB82F421A1CFC700B59744 /* Auth.graphql in Resources */,
 				91A0A49B21A1BE290044C45A /* Main.storyboard in Resources */,
 				91A0A4AF21A1C0CF0044C45A /* Soleil-Bold.ttf in Resources */,
@@ -284,18 +310,14 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 			);
 			name = "Generate Apollo GraphQL API";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-cli.sh codegen:generate --queries=\"$(find . -name '*.graphql')\" --schema=schema.json API.swift\n";
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-cli.sh codegen:generate --queries=\"$(find . -name '*.graphql')\" --schema=schema.json API.swift --passthroughCustomScalars\n\n";
 		};
 		9D57217F99A354101A0F04DA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -325,6 +347,7 @@
 				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftValidator/SwiftValidator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -332,6 +355,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftValidator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,19 +374,23 @@
 				910145B621A1D92C00B19873 /* StringConstants.swift in Sources */,
 				910145BF21A1E65800B19873 /* TixTextField.swift in Sources */,
 				910145C421A2036300B19873 /* EventsViewController.swift in Sources */,
+				910145D321A2657600B19873 /* CheckInViewController.swift in Sources */,
 				910145BD21A1DC5B00B19873 /* Storyboardable.swift in Sources */,
 				9135477921A1C4A900F509DF /* UIViewExtensions.swift in Sources */,
+				910145D121A250C600B19873 /* CheckOrderViewController.swift in Sources */,
 				910145B221A1D74800B19873 /* ApolloClient.swift in Sources */,
 				9135477B21A1C4A900F509DF /* UIViewControllerExtensions.swift in Sources */,
+				910145CC21A238B800B19873 /* EventTableViewCell.swift in Sources */,
 				9135477D21A1C4A900F509DF /* StringExtensions.swift in Sources */,
 				9135477A21A1C4A900F509DF /* InspectableTextAttr.swift in Sources */,
 				910145B421A1D83E00B19873 /* APIConstants.swift in Sources */,
+				910145CE21A23CDA00B19873 /* DateHelper.swift in Sources */,
+				91B05D9D21A2DA7E00C05274 /* API.swift in Sources */,
 				910145C621A2037400B19873 /* EventsCoordinator.swift in Sources */,
 				910145B821A1DA0F00B19873 /* Coordinator.swift in Sources */,
 				910145C121A2018B00B19873 /* TixButton.swift in Sources */,
 				91A0A49621A1BE290044C45A /* AppDelegate.swift in Sources */,
 				910145BB21A1DA5700B19873 /* MainCoordinator.swift in Sources */,
-				91CB82F121A1CE6A00B59744 /* API.swift in Sources */,
 				910145C821A2066400B19873 /* ShadowView.swift in Sources */,
 				9135477C21A1C4A900F509DF /* HelperFunctions.swift in Sources */,
 			);

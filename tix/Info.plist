@@ -50,5 +50,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>tix needs access to your camera to scan ticket QR codes.</string>
 </dict>
 </plist>

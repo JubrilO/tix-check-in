@@ -1,0 +1,11 @@
+
+mutation CheckIn($order: ID, $amountToCheckIn: Int!, $shortID: Int) {
+    checkIn(order: $order, orderShortID: $shortID, amountToCheckIn: $amountToCheckIn ) {
+        buyer
+        checkIns
+        completelyCheckedIn
+        qrCode
+        quantity
+        status
+    }
+}

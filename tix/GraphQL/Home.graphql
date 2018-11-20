@@ -5,6 +5,8 @@ query GetEvents {
                 node{
                     title
                     startDate
+                    endDate
+                    id
                 }
             }
         }
