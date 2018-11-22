@@ -26,6 +26,8 @@
 		910145D321A2657600B19873 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145D221A2657600B19873 /* CheckInViewController.swift */; };
 		910145D521A26A0900B19873 /* CheckIn.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 910145D421A26A0900B19873 /* CheckIn.graphql */; };
 		911721BD21A34CFE00BD335A /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 911721BC21A34CFE00BD335A /* schema.json */; };
+		911721BF21A5BFC500BD335A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911721BE21A5BFC500BD335A /* LoadingViewController.swift */; };
+		911721C121A5C1AF00BD335A /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911721C021A5C1AF00BD335A /* AnimationHelper.swift */; };
 		9135477921A1C4A900F509DF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477421A1C4A900F509DF /* UIViewExtensions.swift */; };
 		9135477A21A1C4A900F509DF /* InspectableTextAttr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477521A1C4A900F509DF /* InspectableTextAttr.swift */; };
 		9135477B21A1C4A900F509DF /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477621A1C4A900F509DF /* UIViewControllerExtensions.swift */; };
@@ -63,6 +65,8 @@
 		910145D221A2657600B19873 /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
 		910145D421A26A0900B19873 /* CheckIn.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CheckIn.graphql; sourceTree = "<group>"; };
 		911721BC21A34CFE00BD335A /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = schema.json; path = tix/schema.json; sourceTree = SOURCE_ROOT; };
+		911721BE21A5BFC500BD335A /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		911721C021A5C1AF00BD335A /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
 		9135477421A1C4A900F509DF /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		9135477521A1C4A900F509DF /* InspectableTextAttr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspectableTextAttr.swift; sourceTree = "<group>"; };
 		9135477621A1C4A900F509DF /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 				9135477421A1C4A900F509DF /* UIViewExtensions.swift */,
 				910145B521A1D92C00B19873 /* StringConstants.swift */,
 				910145CD21A23CDA00B19873 /* DateHelper.swift */,
+				911721BE21A5BFC500BD335A /* LoadingViewController.swift */,
+				911721C021A5C1AF00BD335A /* AnimationHelper.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -372,6 +378,7 @@
 			files = (
 				91A0A49821A1BE290044C45A /* LoginViewController.swift in Sources */,
 				910145B621A1D92C00B19873 /* StringConstants.swift in Sources */,
+				911721C121A5C1AF00BD335A /* AnimationHelper.swift in Sources */,
 				910145BF21A1E65800B19873 /* TixTextField.swift in Sources */,
 				910145C421A2036300B19873 /* EventsViewController.swift in Sources */,
 				910145D321A2657600B19873 /* CheckInViewController.swift in Sources */,
@@ -382,6 +389,7 @@
 				9135477B21A1C4A900F509DF /* UIViewControllerExtensions.swift in Sources */,
 				910145CC21A238B800B19873 /* EventTableViewCell.swift in Sources */,
 				9135477D21A1C4A900F509DF /* StringExtensions.swift in Sources */,
+				911721BF21A5BFC500BD335A /* LoadingViewController.swift in Sources */,
 				9135477A21A1C4A900F509DF /* InspectableTextAttr.swift in Sources */,
 				910145B421A1D83E00B19873 /* APIConstants.swift in Sources */,
 				910145CE21A23CDA00B19873 /* DateHelper.swift in Sources */,
@@ -542,6 +550,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E5H7W73394;
 				INFOPLIST_FILE = tix/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -561,6 +570,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E5H7W73394;
 				INFOPLIST_FILE = tix/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

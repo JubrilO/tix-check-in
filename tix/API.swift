@@ -123,7 +123,7 @@ public final class SignInMutation: GraphQLMutation {
 
 public final class CheckInMutation: GraphQLMutation {
   public let operationDefinition =
-    "mutation CheckIn($order: ID, $amountToCheckIn: Int!, $shortID: Int) {\n  checkIn(order: $order, orderShortID: $shortID, amountToCheckIn: $amountToCheckIn) {\n    __typename\n    buyer\n    checkIns\n    completelyCheckedIn\n    qrCode\n    quantity\n    status\n  }\n}"
+    "mutation CheckIn($order: ID, $amountToCheckIn: Int!, $shortID: Int) {\n  checkIn(order: $order, orderShortID: $shortID, amountToCheckIn: $amountToCheckIn) {\n    __typename\n    id\n    buyer\n    checkIns\n    completelyCheckedIn\n    qrCode\n    quantity\n    shortId\n    status\n    updatedAt\n    ticket {\n      __typename\n      name\n    }\n  }\n}"
 
   public var order: GraphQLID?
   public var amountToCheckIn: Int
@@ -170,12 +170,16 @@ public final class CheckInMutation: GraphQLMutation {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
         GraphQLField("buyer", type: .scalar(String.self)),
         GraphQLField("checkIns", type: .nonNull(.scalar(Int.self))),
         GraphQLField("completelyCheckedIn", type: .nonNull(.scalar(Bool.self))),
         GraphQLField("qrCode", type: .scalar(String.self)),
         GraphQLField("quantity", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("shortId", type: .scalar(String.self)),
         GraphQLField("status", type: .nonNull(.scalar(OrderStatus.self))),
+        GraphQLField("updatedAt", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("ticket", type: .object(Ticket.selections)),
       ]
 
       public private(set) var resultMap: ResultMap
@@ -184,8 +188,8 @@ public final class CheckInMutation: GraphQLMutation {
         self.resultMap = unsafeResultMap
       }
 
-      public init(buyer: String? = nil, checkIns: Int, completelyCheckedIn: Bool, qrCode: String? = nil, quantity: Int, status: OrderStatus) {
-        self.init(unsafeResultMap: ["__typename": "Order", "buyer": buyer, "checkIns": checkIns, "completelyCheckedIn": completelyCheckedIn, "qrCode": qrCode, "quantity": quantity, "status": status])
+      public init(id: GraphQLID, buyer: String? = nil, checkIns: Int, completelyCheckedIn: Bool, qrCode: String? = nil, quantity: Int, shortId: String? = nil, status: OrderStatus, updatedAt: Int, ticket: Ticket? = nil) {
+        self.init(unsafeResultMap: ["__typename": "Order", "id": id, "buyer": buyer, "checkIns": checkIns, "completelyCheckedIn": completelyCheckedIn, "qrCode": qrCode, "quantity": quantity, "shortId": shortId, "status": status, "updatedAt": updatedAt, "ticket": ticket.flatMap { (value: Ticket) -> ResultMap in value.resultMap }])
       }
 
       public var __typename: String {
@@ -194,6 +198,15 @@ public final class CheckInMutation: GraphQLMutation {
         }
         set {
           resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var id: GraphQLID {
+        get {
+          return resultMap["id"]! as! GraphQLID
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "id")
         }
       }
 
@@ -242,12 +255,284 @@ public final class CheckInMutation: GraphQLMutation {
         }
       }
 
+      public var shortId: String? {
+        get {
+          return resultMap["shortId"] as? String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "shortId")
+        }
+      }
+
       public var status: OrderStatus {
         get {
           return resultMap["status"]! as! OrderStatus
         }
         set {
           resultMap.updateValue(newValue, forKey: "status")
+        }
+      }
+
+      public var updatedAt: Int {
+        get {
+          return resultMap["updatedAt"]! as! Int
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "updatedAt")
+        }
+      }
+
+      public var ticket: Ticket? {
+        get {
+          return (resultMap["ticket"] as? ResultMap).flatMap { Ticket(unsafeResultMap: $0) }
+        }
+        set {
+          resultMap.updateValue(newValue?.resultMap, forKey: "ticket")
+        }
+      }
+
+      public struct Ticket: GraphQLSelectionSet {
+        public static let possibleTypes = ["Ticket"]
+
+        public static let selections: [GraphQLSelection] = [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("name", type: .scalar(String.self)),
+        ]
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(name: String? = nil) {
+          self.init(unsafeResultMap: ["__typename": "Ticket", "name": name])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var name: String? {
+          get {
+            return resultMap["name"] as? String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "name")
+          }
+        }
+      }
+    }
+  }
+}
+
+public final class UndoCheckInMutation: GraphQLMutation {
+  public let operationDefinition =
+    "mutation UndoCheckIn($id: ID, $amountToRemove: Int!) {\n  undoCheckIn(order: $id, amountToRemove: $amountToRemove) {\n    __typename\n    id\n    buyer\n    checkIns\n    completelyCheckedIn\n    qrCode\n    quantity\n    shortId\n    status\n    updatedAt\n    ticket {\n      __typename\n      name\n    }\n  }\n}"
+
+  public var id: GraphQLID?
+  public var amountToRemove: Int
+
+  public init(id: GraphQLID? = nil, amountToRemove: Int) {
+    self.id = id
+    self.amountToRemove = amountToRemove
+  }
+
+  public var variables: GraphQLMap? {
+    return ["id": id, "amountToRemove": amountToRemove]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes = ["Mutation"]
+
+    public static let selections: [GraphQLSelection] = [
+      GraphQLField("undoCheckIn", arguments: ["order": GraphQLVariable("id"), "amountToRemove": GraphQLVariable("amountToRemove")], type: .object(UndoCheckIn.selections)),
+    ]
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(undoCheckIn: UndoCheckIn? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Mutation", "undoCheckIn": undoCheckIn.flatMap { (value: UndoCheckIn) -> ResultMap in value.resultMap }])
+    }
+
+    public var undoCheckIn: UndoCheckIn? {
+      get {
+        return (resultMap["undoCheckIn"] as? ResultMap).flatMap { UndoCheckIn(unsafeResultMap: $0) }
+      }
+      set {
+        resultMap.updateValue(newValue?.resultMap, forKey: "undoCheckIn")
+      }
+    }
+
+    public struct UndoCheckIn: GraphQLSelectionSet {
+      public static let possibleTypes = ["Order"]
+
+      public static let selections: [GraphQLSelection] = [
+        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
+        GraphQLField("buyer", type: .scalar(String.self)),
+        GraphQLField("checkIns", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("completelyCheckedIn", type: .nonNull(.scalar(Bool.self))),
+        GraphQLField("qrCode", type: .scalar(String.self)),
+        GraphQLField("quantity", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("shortId", type: .scalar(String.self)),
+        GraphQLField("status", type: .nonNull(.scalar(OrderStatus.self))),
+        GraphQLField("updatedAt", type: .nonNull(.scalar(Int.self))),
+        GraphQLField("ticket", type: .object(Ticket.selections)),
+      ]
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(id: GraphQLID, buyer: String? = nil, checkIns: Int, completelyCheckedIn: Bool, qrCode: String? = nil, quantity: Int, shortId: String? = nil, status: OrderStatus, updatedAt: Int, ticket: Ticket? = nil) {
+        self.init(unsafeResultMap: ["__typename": "Order", "id": id, "buyer": buyer, "checkIns": checkIns, "completelyCheckedIn": completelyCheckedIn, "qrCode": qrCode, "quantity": quantity, "shortId": shortId, "status": status, "updatedAt": updatedAt, "ticket": ticket.flatMap { (value: Ticket) -> ResultMap in value.resultMap }])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var id: GraphQLID {
+        get {
+          return resultMap["id"]! as! GraphQLID
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "id")
+        }
+      }
+
+      public var buyer: String? {
+        get {
+          return resultMap["buyer"] as? String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "buyer")
+        }
+      }
+
+      public var checkIns: Int {
+        get {
+          return resultMap["checkIns"]! as! Int
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "checkIns")
+        }
+      }
+
+      public var completelyCheckedIn: Bool {
+        get {
+          return resultMap["completelyCheckedIn"]! as! Bool
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "completelyCheckedIn")
+        }
+      }
+
+      public var qrCode: String? {
+        get {
+          return resultMap["qrCode"] as? String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "qrCode")
+        }
+      }
+
+      public var quantity: Int {
+        get {
+          return resultMap["quantity"]! as! Int
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "quantity")
+        }
+      }
+
+      public var shortId: String? {
+        get {
+          return resultMap["shortId"] as? String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "shortId")
+        }
+      }
+
+      public var status: OrderStatus {
+        get {
+          return resultMap["status"]! as! OrderStatus
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "status")
+        }
+      }
+
+      public var updatedAt: Int {
+        get {
+          return resultMap["updatedAt"]! as! Int
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "updatedAt")
+        }
+      }
+
+      public var ticket: Ticket? {
+        get {
+          return (resultMap["ticket"] as? ResultMap).flatMap { Ticket(unsafeResultMap: $0) }
+        }
+        set {
+          resultMap.updateValue(newValue?.resultMap, forKey: "ticket")
+        }
+      }
+
+      public struct Ticket: GraphQLSelectionSet {
+        public static let possibleTypes = ["Ticket"]
+
+        public static let selections: [GraphQLSelection] = [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("name", type: .scalar(String.self)),
+        ]
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(name: String? = nil) {
+          self.init(unsafeResultMap: ["__typename": "Ticket", "name": name])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var name: String? {
+          get {
+            return resultMap["name"] as? String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "name")
+          }
         }
       }
     }

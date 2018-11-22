@@ -1,11 +1,34 @@
 
 mutation CheckIn($order: ID, $amountToCheckIn: Int!, $shortID: Int) {
     checkIn(order: $order, orderShortID: $shortID, amountToCheckIn: $amountToCheckIn ) {
+        id
         buyer
         checkIns
         completelyCheckedIn
         qrCode
         quantity
+        shortId
         status
+        updatedAt
+        ticket {
+            name
+        }
+    }
+}
+
+mutation UndoCheckIn($id: ID, $amountToRemove: Int!) {
+    undoCheckIn(order: $id, amountToRemove: $amountToRemove) {
+        id
+        buyer
+        checkIns
+        completelyCheckedIn
+        qrCode
+        quantity
+        shortId
+        status
+        updatedAt
+        ticket {
+            name
+        }
     }
 }

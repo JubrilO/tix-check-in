@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Locksmith
 
 class EventsCoordinator: Coordinator {
     var navigationController: UINavigationController
@@ -43,6 +44,7 @@ class EventsCoordinator: Coordinator {
         let checkInMutation = CheckInMutation(amountToCheckIn: 0, shortID: id)
         ApolloManager().apolloClient.perform(mutation: checkInMutation) { [weak self]
             result, error in
+            self?.checkOrderVC?.hideActivityIndicator()
             guard error == nil else {
                 //hide activity inidcator
                 self?.checkOrderVC?.displayErrorModal(error: error?.localizedDescription)
@@ -64,6 +66,7 @@ class EventsCoordinator: Coordinator {
         ApolloManager().apolloClient.perform(mutation: checkInMutation) { [weak self]
             result, error in
             print("request complete")
+            self?.checkOrderVC?.hideActivityIndicator()
             guard error == nil else {
                 //hide activity inidcator
                 self?.checkOrderVC?.displayErrorModal(error: error?.localizedDescription)
@@ -79,6 +82,56 @@ class EventsCoordinator: Coordinator {
                 self?.pushCheckInVC(ticket: ticket)
             }
         }
+    }
+    
+    func checkInOrder(id: String, amountToCheckIn: Int) {
+        let checkInMutation = CheckInMutation(order: id, amountToCheckIn: amountToCheckIn)
+        ApolloManager().apolloClient.perform(mutation: checkInMutation) { [weak self]
+            result, error in
+            print("request complete")
+            self?.checkInVC?.hideActivityIndicator()
+            guard error == nil else {
+                self?.checkInVC?.displayErrorModal(error: error?.localizedDescription)
+                return
+            }
+            
+            guard result?.errors == nil else {
+                self?.checkInVC?.displayErrorModal(error: getGraphQLErrorString(result!.errors!))
+                return
+            }
+            if let ticket = result?.data?.checkIn {
+                self?.checkInVC?.ticket = ticket
+            }
+        }
+    }
+    
+    func undoCheckIn(id: String, amountToRemove: Int) {
+        let undoCheckInMutation = UndoCheckInMutation(id: id, amountToRemove: amountToRemove)
+        ApolloManager().apolloClient.perform(mutation: undoCheckInMutation) { [weak self]
+            result, error in
+            print("request complete")
+            self?.checkInVC?.hideActivityIndicator()
+            guard error == nil else {
+                self?.checkInVC?.displayErrorModal(error: error?.localizedDescription)
+                return
+            }
+            
+            guard result?.errors == nil else {
+                self?.checkInVC?.displayErrorModal(error: getGraphQLErrorString(result!.errors!))
+                return
+            }
+            if let ticket = result?.data?.undoCheckIn {
+                
+                let tick = CheckInMutation.Data.CheckIn(id: ticket.id, buyer: ticket.buyer, checkIns: ticket.checkIns, completelyCheckedIn: ticket.completelyCheckedIn, qrCode: ticket.qrCode, quantity: ticket.quantity, shortId: ticket.shortId, status: ticket.status, updatedAt: ticket.updatedAt, ticket: CheckInMutation.Data.CheckIn.Ticket(name: ticket.ticket?.name))
+                self?.checkInVC?.ticket = tick
+            }
+        }
+        
+    }
+    
+    func logoutUser() {
+        try! Locksmith.deleteDataForUserAccount(userAccount: Constants.TixUser)
+        MainCoordinator(navVC: navigationController).start()
     }
     
     func pushCheckInVC(ticket: CheckInMutation.Data.CheckIn) {

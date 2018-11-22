@@ -21,6 +21,7 @@ class CheckOrderViewController: UIViewController, Storyboardable, ValidationDele
     @IBOutlet weak var eventTitle: UILabel!
     var event: GetEventsQuery.Data.CurrentUser.Event.Edge.Node?
     var coordinator: EventsCoordinator?
+    let loadingVC = LoadingViewController.instantiate()
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     lazy var readerVC: QRCodeReaderViewController = {
         let builder = QRCodeReaderViewControllerBuilder {
@@ -39,6 +40,11 @@ class CheckOrderViewController: UIViewController, Storyboardable, ValidationDele
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        orderIDTextField.text = ""
+    }
+    
     @IBAction func onBackButtonTap(_ sender: UIButton) {
         coordinator?.popViewController(self)
     }
@@ -54,9 +60,13 @@ class CheckOrderViewController: UIViewController, Storyboardable, ValidationDele
     }
     
     @IBAction func onCheckOrderTap(_ sender: Any) {
-        activityIndicator.startAnimating()
+        showActiviyIndicator()
         checkOrderButton.isEnabled = false
         validator.validate(self)
+    }
+    
+    @IBAction func onLogoutButtonTap(_ sender: UIButton) {
+        coordinator?.logoutUser()
     }
     
     func validationSuccessful() {
@@ -70,6 +80,7 @@ class CheckOrderViewController: UIViewController, Storyboardable, ValidationDele
     func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
         print("ScanResult \(result.value)")
         coordinator?.checkOrderID(longID: result.value)
+        showActiviyIndicator()
         scanLabel.textColor = .black
         scanLabel.text = "Or check in with QR Code"
         reader.stopScanning()
@@ -86,6 +97,15 @@ class CheckOrderViewController: UIViewController, Storyboardable, ValidationDele
         scanLabel.text = "Or check in with QR Code"
         reader.stopScanning()
         readerVC.remove()
+    }
+    
+    func showActiviyIndicator() {
+        add(loadingVC)
+        
+    }
+    
+    func hideActivityIndicator() {
+        loadingVC.remove()
     }
 
 }

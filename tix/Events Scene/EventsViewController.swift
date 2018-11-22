@@ -18,6 +18,7 @@ class EventsViewController: UIViewController, Storyboardable {
 
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    let loadingVC = LoadingViewController.instantiate()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +35,7 @@ class EventsViewController: UIViewController, Storyboardable {
     }
     
     func fetchData() {
-        
+        showActivityIndicator()
         ApolloManager().apolloClient.fetch(query: GetEventsQuery()) {[weak self]
             result, error in
             print("Fetched events")
@@ -63,13 +64,17 @@ class EventsViewController: UIViewController, Storyboardable {
         }
     }
     
-    func hideActivityIndicator() {
+    func showActivityIndicator() {
+        add(loadingVC)
         
     }
     
+    func hideActivityIndicator() {
+        loadingVC.remove()
+    }
     
     @IBAction func onLogoutButtonTap(_ sender: UIButton) {
-        
+        coordinator?.logoutUser()
     }
     
 }
