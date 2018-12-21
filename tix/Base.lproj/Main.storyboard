@@ -43,19 +43,19 @@
                                                 <rect key="frame" x="25" y="30" width="33" height="24"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to your Tix account to manage your event check-ins" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efg-j6-Xi1">
-                                                <rect key="frame" x="25" y="130" width="300" height="40.5"/>
+                                                <rect key="frame" x="25" y="130" width="300" height="42"/>
                                                 <fontDescription key="fontDescription" name="Soleil-Regular" family="Soleil" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a1s-qJ-Rp2" customClass="TixTextField" customModule="tix" customModuleProvider="target">
-                                                <rect key="frame" x="25" y="192.5" width="320" height="50"/>
+                                                <rect key="frame" x="25" y="194" width="320" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="TXk-Cn-SLB"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Soleil-Regular" family="Soleil" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" spellCheckingType="no" textContentType="email"/>
+                                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="5"/>
@@ -63,7 +63,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZY-o4-u70" customClass="TixTextField" customModule="tix" customModuleProvider="target">
-                                                <rect key="frame" x="25" y="257.5" width="320" height="50"/>
+                                                <rect key="frame" x="25" y="259" width="320" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="rNo-3D-9dm"/>
                                                 </constraints>
@@ -76,8 +76,14 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tix © 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bl-fe-7IX">
+                                                <rect key="frame" x="25" y="406" width="69" height="16"/>
+                                                <fontDescription key="fontDescription" name="Soleil-Regular" family="Soleil" pointSize="14"/>
+                                                <color key="textColor" red="0.62" green="0.62" blue="0.62" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhe-YQ-gRr" customClass="TixButton" customModule="tix" customModuleProvider="target">
-                                                <rect key="frame" x="25" y="322.5" width="320" height="50"/>
+                                                <rect key="frame" x="25" y="324" width="320" height="50"/>
                                                 <color key="backgroundColor" red="0.98999999999999999" green="0.39000000000000001" blue="0.20999999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="2lu-c0-wva"/>
@@ -95,14 +101,8 @@
                                                     <action selector="onLoginButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bRA-Eh-zBu"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tix © 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bl-fe-7IX">
-                                                <rect key="frame" x="25" y="404.5" width="63.5" height="16"/>
-                                                <fontDescription key="fontDescription" name="Soleil-Regular" family="Soleil" pointSize="14"/>
-                                                <color key="textColor" red="0.62" green="0.62" blue="0.62" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="e3i-Z1-wtL">
-                                                <rect key="frame" x="175" y="337.5" width="20" height="20"/>
+                                                <rect key="frame" x="175" y="339" width="20" height="20"/>
                                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </activityIndicatorView>
                                         </subviews>
@@ -184,7 +184,7 @@
                                 <rect key="frame" x="25" y="50" width="33" height="24"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aB-Hf-ibv">
-                                <rect key="frame" x="279" y="50" width="66" height="33"/>
+                                <rect key="frame" x="277" y="50" width="68" height="33"/>
                                 <fontDescription key="fontDescription" name="Soleil-Regular" family="Soleil" pointSize="18"/>
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -207,14 +207,14 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xt-Qw-CKj" customClass="ShadowView" customModule="tix" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="13" width="320" height="65"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timigod 555" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0j-G0-g3I">
-                                                            <rect key="frame" x="26" y="22" width="223" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Timigod 555" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0j-G0-g3I">
+                                                            <rect key="frame" x="26" y="22" width="221.5" height="21"/>
                                                             <fontDescription key="fontDescription" name="Soleil-Regular" family="Soleil" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="NOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPc-lY-9G7">
-                                                            <rect key="frame" x="269" y="25.5" width="29" height="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" misplaced="YES" text="NOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPc-lY-9G7">
+                                                            <rect key="frame" x="267.5" y="25.5" width="30.5" height="14"/>
                                                             <fontDescription key="fontDescription" name="Soleil-Bold" family="Soleil" pointSize="12"/>
                                                             <color key="textColor" red="1" green="0.35999999999999999" blue="0.35999999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -252,25 +252,38 @@
                                     <outlet property="delegate" destination="1ka-Vr-HBr" id="KJ6-Et-neR"/>
                                 </connections>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No upcoming events" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYB-sK-5uG">
+                                <rect key="frame" x="-31" y="249" width="221.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Soleil-Regular" family="Soleil" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="e8Z-8B-bOQ" firstAttribute="trailing" secondItem="9aB-Hf-ibv" secondAttribute="trailing" constant="30" id="1zJ-dI-Hv8"/>
                             <constraint firstItem="e8Z-8B-bOQ" firstAttribute="trailing" secondItem="hRc-R5-VMv" secondAttribute="trailing" id="3eQ-1v-YFM"/>
                             <constraint firstItem="WKp-Qq-9Zh" firstAttribute="leading" secondItem="e8Z-8B-bOQ" secondAttribute="leading" constant="25" id="3s8-HQ-XoU"/>
+                            <constraint firstItem="AYB-sK-5uG" firstAttribute="centerY" secondItem="LpA-bf-F8T" secondAttribute="centerY" id="4HT-Ij-0EO"/>
                             <constraint firstItem="hRc-R5-VMv" firstAttribute="leading" secondItem="e8Z-8B-bOQ" secondAttribute="leading" id="6eA-b1-HoH"/>
                             <constraint firstItem="naa-w9-JeL" firstAttribute="top" secondItem="e8Z-8B-bOQ" secondAttribute="top" constant="30" id="9Wb-2w-jyd"/>
                             <constraint firstItem="9aB-Hf-ibv" firstAttribute="top" secondItem="e8Z-8B-bOQ" secondAttribute="top" constant="30" id="FRK-i8-Z7k"/>
                             <constraint firstItem="e8Z-8B-bOQ" firstAttribute="bottom" secondItem="WKp-Qq-9Zh" secondAttribute="bottom" id="KwP-Lb-HKi"/>
+                            <constraint firstItem="FPc-lY-9G7" firstAttribute="leading" secondItem="X0j-G0-g3I" secondAttribute="trailing" constant="20" id="LhI-04-Mv9"/>
+                            <constraint firstItem="AYB-sK-5uG" firstAttribute="centerX" secondItem="LpA-bf-F8T" secondAttribute="centerX" id="MFZ-K1-T9u"/>
                             <constraint firstItem="hRc-R5-VMv" firstAttribute="bottom" secondItem="e8Z-8B-bOQ" secondAttribute="bottom" id="O2I-DC-FMi"/>
                             <constraint firstItem="naa-w9-JeL" firstAttribute="leading" secondItem="e8Z-8B-bOQ" secondAttribute="leading" constant="25" id="TGS-a6-vzK"/>
+                            <constraint firstItem="X0j-G0-g3I" firstAttribute="top" secondItem="LpA-bf-F8T" secondAttribute="top" constant="146" id="d7d-ZX-z9h"/>
                             <constraint firstItem="hRc-R5-VMv" firstAttribute="top" secondItem="LpA-bf-F8T" secondAttribute="top" id="fpF-Wl-Eb4"/>
                             <constraint firstItem="e8Z-8B-bOQ" firstAttribute="trailing" secondItem="WKp-Qq-9Zh" secondAttribute="trailing" constant="30" id="g9N-Lj-aWP"/>
                             <constraint firstItem="WKp-Qq-9Zh" firstAttribute="top" secondItem="9aB-Hf-ibv" secondAttribute="bottom" id="h28-5D-S6H"/>
+                            <constraint firstAttribute="bottom" secondItem="X0j-G0-g3I" secondAttribute="bottom" constant="500" id="qlv-1R-lC4"/>
+                            <constraint firstItem="X0j-G0-g3I" firstAttribute="leading" secondItem="LpA-bf-F8T" secondAttribute="leading" constant="51" id="yc5-9C-ZMY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e8Z-8B-bOQ"/>
                     </view>
                     <connections>
+                        <outlet property="emptyDataLabel" destination="AYB-sK-5uG" id="M80-bf-A0Q"/>
                         <outlet property="logoutButton" destination="9aB-Hf-ibv" id="106-iz-flg"/>
                         <outlet property="tableView" destination="WKp-Qq-9Zh" id="PQE-kX-Ysk"/>
                     </connections>
@@ -357,7 +370,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Soleil-Regular" family="Soleil" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8S-0A-DZn" customClass="TixButton" customModule="tix" customModuleProvider="target">
                                                 <rect key="frame" x="25" y="200" width="320" height="50"/>
@@ -495,24 +508,24 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="584"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FOUND ORDER FOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UN-1e-dVy">
-                                                <rect key="frame" x="130.5" y="35" width="114.5" height="14"/>
+                                                <rect key="frame" x="131.5" y="35" width="112.5" height="13.5"/>
                                                 <fontDescription key="fontDescription" name="Soleil-Bold" family="Soleil" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timigod 555" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiM-FT-odp">
-                                                <rect key="frame" x="50" y="55" width="275" height="28"/>
+                                                <rect key="frame" x="50" y="54.5" width="275" height="27"/>
                                                 <fontDescription key="fontDescription" name="Soleil-Regular" family="Soleil" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mS-YR-Da2" customClass="ShadowView" customModule="tix" customModuleProvider="target">
-                                                <rect key="frame" x="25" y="113" width="325" height="207"/>
+                                                <rect key="frame" x="25" y="111.5" width="325" height="207"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID 12345" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGt-xk-GNx">
-                                                        <rect key="frame" x="138.5" y="17" width="48.5" height="13.5"/>
+                                                        <rect key="frame" x="140" y="17" width="45.5" height="13.5"/>
                                                         <fontDescription key="fontDescription" name="Soleil-Bold" family="Soleil" pointSize="12"/>
-                                                        <color key="textColor" red="0.66000000000000003" green="0.66000000000000003" blue="0.66000000000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" red="0.6588235294117647" green="0.6588235294117647" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTo-6a-a2e">
@@ -526,7 +539,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not checked in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXQ-jq-BHB">
-                                                                <rect key="frame" x="91.5" y="15.5" width="108.5" height="19"/>
+                                                                <rect key="frame" x="88.5" y="16" width="114.5" height="18"/>
                                                                 <fontDescription key="fontDescription" name="Soleil-Bold" family="Soleil" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -553,7 +566,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSF-q1-oIK">
-                                                                <rect key="frame" x="0.0" y="15.5" width="291" height="19"/>
+                                                                <rect key="frame" x="0.0" y="16" width="291" height="18"/>
                                                                 <fontDescription key="fontDescription" name="Soleil-Regular" family="Soleil" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -574,7 +587,7 @@
                                                         <rect key="frame" x="17" y="140.5" width="291" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paid for 2 * VIP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSU-db-0BC">
-                                                                <rect key="frame" x="91.5" y="15.5" width="108" height="19"/>
+                                                                <rect key="frame" x="91" y="16" width="109" height="18"/>
                                                                 <fontDescription key="fontDescription" name="Soleil-Regular" family="Soleil" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -612,13 +625,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many people to check in?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSR-2G-vMz">
-                                                <rect key="frame" x="28" y="349" width="249.5" height="21"/>
+                                                <rect key="frame" x="28" y="347.5" width="253.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="Soleil-Regular" family="Soleil" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Nxz-ci-9me">
-                                                <rect key="frame" x="28" y="389" width="319" height="50"/>
+                                                <rect key="frame" x="28" y="387" width="319" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lS4-0z-nuD" customClass="TixTextField" customModule="tix" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="154" height="50"/>
@@ -654,13 +667,13 @@
                                                 </constraints>
                                             </stackView>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BACK TO HOME IN 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVJ-Mc-f8F">
-                                                <rect key="frame" x="30" y="349" width="135.5" height="16.5"/>
+                                                <rect key="frame" x="30" y="347.5" width="134" height="16"/>
                                                 <fontDescription key="fontDescription" name="Soleil-Bold" family="Soleil" pointSize="14"/>
                                                 <color key="textColor" red="0.70999999999999996" green="0.70999999999999996" blue="0.70999999999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rt-3a-jFw">
-                                                <rect key="frame" x="230" y="343" width="111" height="29"/>
+                                                <rect key="frame" x="230" y="341.5" width="111" height="28"/>
                                                 <fontDescription key="fontDescription" name="Soleil-Bold" family="Soleil" pointSize="14"/>
                                                 <state key="normal" title="UNDO CHECK IN">
                                                     <color key="titleColor" red="0.98999999999999999" green="0.39000000000000001" blue="0.20999999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -670,7 +683,7 @@
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Um-9h-U2u">
-                                                <rect key="frame" x="30" y="466" width="263" height="28.5"/>
+                                                <rect key="frame" x="30" y="464" width="258" height="27.5"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="WANT TO UNDO INSTEAD?">
@@ -694,7 +707,7 @@
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cxg-vT-c6L">
-                                                <rect key="frame" x="30" y="466" width="288" height="28.5"/>
+                                                <rect key="frame" x="30" y="464" width="281" height="27.5"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="WANT TO CHECK IN INSTEAD?">
@@ -753,7 +766,7 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrM-kp-aB5">
-                                <rect key="frame" x="279" y="50" width="66" height="33"/>
+                                <rect key="frame" x="277" y="50" width="68" height="33"/>
                                 <fontDescription key="fontDescription" name="Soleil-Regular" family="Soleil" pointSize="18"/>
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

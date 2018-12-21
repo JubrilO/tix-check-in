@@ -123,13 +123,13 @@ public final class SignInMutation: GraphQLMutation {
 
 public final class CheckInMutation: GraphQLMutation {
   public let operationDefinition =
-    "mutation CheckIn($order: ID, $amountToCheckIn: Int!, $shortID: Int) {\n  checkIn(order: $order, orderShortID: $shortID, amountToCheckIn: $amountToCheckIn) {\n    __typename\n    id\n    buyer\n    checkIns\n    completelyCheckedIn\n    qrCode\n    quantity\n    shortId\n    status\n    updatedAt\n    ticket {\n      __typename\n      name\n    }\n  }\n}"
+    "mutation CheckIn($order: ID, $amountToCheckIn: Int!, $shortID: String) {\n  checkIn(order: $order, orderShortID: $shortID, amountToCheckIn: $amountToCheckIn) {\n    __typename\n    id\n    buyer\n    checkIns\n    completelyCheckedIn\n    qrCode\n    quantity\n    shortId\n    status\n    updatedAt\n    ticket {\n      __typename\n      name\n    }\n  }\n}"
 
   public var order: GraphQLID?
   public var amountToCheckIn: Int
-  public var shortID: Int?
+  public var shortID: String?
 
-  public init(order: GraphQLID? = nil, amountToCheckIn: Int, shortID: Int? = nil) {
+  public init(order: GraphQLID? = nil, amountToCheckIn: Int, shortID: String? = nil) {
     self.order = order
     self.amountToCheckIn = amountToCheckIn
     self.shortID = shortID

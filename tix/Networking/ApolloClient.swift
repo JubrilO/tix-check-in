@@ -15,7 +15,9 @@ class ApolloManager {
         let configuration = URLSessionConfiguration.default
         let url = URL(string: APIConstants.GraphQLURL)!
         if let auth = Locksmith.loadDataForUserAccount(userAccount: Constants.TixUser)?["token"] as? String {
-            configuration.httpAdditionalHeaders = ["Authorization": "Bearer " + auth]
+            let authToken = ["Authorization": "Bearer " + auth]
+            print(authToken)
+            configuration.httpAdditionalHeaders = authToken
             return ApolloClient(networkTransport: HTTPNetworkTransport(url: url, configuration: configuration))
         }
         else {

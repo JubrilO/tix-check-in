@@ -12,10 +12,19 @@ class EventsViewController: UIViewController, Storyboardable {
     var coordinator: EventsCoordinator?
     var events = [GetEventsQuery.Data.CurrentUser.Event.Edge.Node]() {
         didSet{
-            tableView.reloadData()
+            if events.isEmpty {
+                tableView.isHidden = true
+                emptyDataLabel.isHidden = false
+            }
+            else {
+                emptyDataLabel.isHidden = true
+                tableView.isHidden = false
+                tableView.reloadData()
+            }
         }
     }
-
+    @IBOutlet weak var emptyDataLabel: UILabel!
+    
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     let loadingVC = LoadingViewController.instantiate()
@@ -40,7 +49,7 @@ class EventsViewController: UIViewController, Storyboardable {
             result, error in
             print("Fetched events")
             self?.hideActivityIndicator()
-
+            
             guard error == nil else {
                 self?.displayErrorModal(error: error?.localizedDescription)
                 return
@@ -59,7 +68,7 @@ class EventsViewController: UIViewController, Storyboardable {
             }
             let it = events.edges!.map {$0!.node!}
             print("Event count = \(it.count)")
-            self?.events = it
+            self?.events = it.sorted(by: { $0.startDate < $1.startDate})
             
         }
     }
@@ -91,6 +100,7 @@ extension EventsViewController: UITableViewDataSource, UITableViewDelegate {
         let startDate = Date(timeIntervalSince1970: Double(event.startDate))
         
         cell.titleLabel.text = event.title
+        cell.timeLabel.text = startDate.timeAgoSinceNow()
         return cell
         //cell.timeLabel.text = event.
     }

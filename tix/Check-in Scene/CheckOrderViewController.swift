@@ -36,7 +36,7 @@ class CheckOrderViewController: UIViewController, Storyboardable, ValidationDele
     override func viewDidLoad() {
         super.viewDidLoad()
         eventTitle.text = event?.title
-        validator.registerField(orderIDTextField, rules: [RequiredRule()])
+        validator.registerField(orderIDTextField, rules: [RequiredRule(), FloatRule(message: "Invalid order id")])
 
     }
     
@@ -61,7 +61,7 @@ class CheckOrderViewController: UIViewController, Storyboardable, ValidationDele
     
     @IBAction func onCheckOrderTap(_ sender: Any) {
         showActiviyIndicator()
-        checkOrderButton.isEnabled = false
+        //checkOrderButton.isEnabled = false
         validator.validate(self)
     }
     
@@ -70,11 +70,13 @@ class CheckOrderViewController: UIViewController, Storyboardable, ValidationDele
     }
     
     func validationSuccessful() {
-        coordinator?.checkOrderID(id: Int(orderIDTextField.text!)!)
+        print("Short ID \(Int(orderIDTextField.text!)!)")
+        coordinator?.checkOrderID(id: orderIDTextField.text!)
     }
     
     func validationFailed(_ errors: [(Validatable, ValidationError)]) {
-        activityIndicator.stopAnimating()
+        displayErrorModal(error: errors.first?.1.errorMessage)
+        hideActivityIndicator()
     }
     
     func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {

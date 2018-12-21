@@ -40,7 +40,7 @@ class EventsCoordinator: Coordinator {
         navigationController.pushViewController(checkOrderVC, animated: true)
     }
     
-    func checkOrderID(id: Int) {
+    func checkOrderID(id: String) {
         let checkInMutation = CheckInMutation(amountToCheckIn: 0, shortID: id)
         ApolloManager().apolloClient.perform(mutation: checkInMutation) { [weak self]
             result, error in
@@ -55,14 +55,16 @@ class EventsCoordinator: Coordinator {
                 self?.checkOrderVC?.displayErrorModal(error: getGraphQLErrorString(result!.errors!))
                 return
             }
+            print(result?.data?.checkIn)
             if let ticket = result?.data?.checkIn {
             self?.pushCheckInVC(ticket: ticket)
             }
+            //self?.pushCheckInVC(ticket: result?.data?.checkIn!)
         }
     }
     
     func checkOrderID(longID: String) {
-        let checkInMutation = CheckInMutation(order: longID, amountToCheckIn: 0, shortID: nil)
+        let checkInMutation = CheckInMutation(order: longID, amountToCheckIn: 0)
         ApolloManager().apolloClient.perform(mutation: checkInMutation) { [weak self]
             result, error in
             print("request complete")

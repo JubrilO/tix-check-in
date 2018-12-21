@@ -25,7 +25,6 @@
 		910145D121A250C600B19873 /* CheckOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145D021A250C600B19873 /* CheckOrderViewController.swift */; };
 		910145D321A2657600B19873 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910145D221A2657600B19873 /* CheckInViewController.swift */; };
 		910145D521A26A0900B19873 /* CheckIn.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 910145D421A26A0900B19873 /* CheckIn.graphql */; };
-		911721BD21A34CFE00BD335A /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 911721BC21A34CFE00BD335A /* schema.json */; };
 		911721BF21A5BFC500BD335A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911721BE21A5BFC500BD335A /* LoadingViewController.swift */; };
 		911721C121A5C1AF00BD335A /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911721C021A5C1AF00BD335A /* AnimationHelper.swift */; };
 		9135477921A1C4A900F509DF /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477421A1C4A900F509DF /* UIViewExtensions.swift */; };
@@ -33,6 +32,7 @@
 		9135477B21A1C4A900F509DF /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477621A1C4A900F509DF /* UIViewControllerExtensions.swift */; };
 		9135477C21A1C4A900F509DF /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477721A1C4A900F509DF /* HelperFunctions.swift */; };
 		9135477D21A1C4A900F509DF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135477821A1C4A900F509DF /* StringExtensions.swift */; };
+		918CDCD921CBDB420042DC24 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 918CDCD821CBDB420042DC24 /* schema.json */; };
 		91A0A49621A1BE290044C45A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A49521A1BE290044C45A /* AppDelegate.swift */; };
 		91A0A49821A1BE290044C45A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A49721A1BE290044C45A /* LoginViewController.swift */; };
 		91A0A49B21A1BE290044C45A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A49921A1BE290044C45A /* Main.storyboard */; };
@@ -64,7 +64,6 @@
 		910145D021A250C600B19873 /* CheckOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOrderViewController.swift; sourceTree = "<group>"; };
 		910145D221A2657600B19873 /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
 		910145D421A26A0900B19873 /* CheckIn.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CheckIn.graphql; sourceTree = "<group>"; };
-		911721BC21A34CFE00BD335A /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = schema.json; path = tix/schema.json; sourceTree = SOURCE_ROOT; };
 		911721BE21A5BFC500BD335A /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		911721C021A5C1AF00BD335A /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
 		9135477421A1C4A900F509DF /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -72,6 +71,7 @@
 		9135477621A1C4A900F509DF /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		9135477721A1C4A900F509DF /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		9135477821A1C4A900F509DF /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		918CDCD821CBDB420042DC24 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		91A0A49221A1BE290044C45A /* tix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A0A49521A1BE290044C45A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91A0A49721A1BE290044C45A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 		91A0A49421A1BE290044C45A /* tix */ = {
 			isa = PBXGroup;
 			children = (
-				911721BC21A34CFE00BD335A /* schema.json */,
+				918CDCD821CBDB420042DC24 /* schema.json */,
 				910145CF21A24F8600B19873 /* Check-in Scene */,
 				910145C221A202DE00B19873 /* Events Scene */,
 				910145B921A1DA2D00B19873 /* Auth Scene */,
@@ -301,7 +301,7 @@
 				910145CA21A206E700B19873 /* Home.graphql in Resources */,
 				91A0A4AD21A1C0CF0044C45A /* Soleil-Regular.ttf in Resources */,
 				91A0A49D21A1BE2B0044C45A /* Assets.xcassets in Resources */,
-				911721BD21A34CFE00BD335A /* schema.json in Resources */,
+				918CDCD921CBDB420042DC24 /* schema.json in Resources */,
 				91CB82F421A1CFC700B59744 /* Auth.graphql in Resources */,
 				91A0A49B21A1BE290044C45A /* Main.storyboard in Resources */,
 				91A0A4AF21A1C0CF0044C45A /* Soleil-Bold.ttf in Resources */,
@@ -547,6 +547,7 @@
 			baseConfigurationReference = CC240E958C6813251DB2DADE /* Pods-tix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E5H7W73394;
 				INFOPLIST_FILE = tix/Info.plist;
@@ -555,8 +556,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tix.tix;
+				PRODUCT_BUNDLE_IDENTIFIER = ng.com.tix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -567,6 +569,7 @@
 			baseConfigurationReference = B32015D9018BD748B7BC6E9E /* Pods-tix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E5H7W73394;
 				INFOPLIST_FILE = tix/Info.plist;
@@ -575,8 +578,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tix.tix;
+				PRODUCT_BUNDLE_IDENTIFIER = ng.com.tix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

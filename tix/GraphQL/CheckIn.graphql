@@ -1,5 +1,5 @@
 
-mutation CheckIn($order: ID, $amountToCheckIn: Int!, $shortID: Int) {
+mutation CheckIn($order: ID, $amountToCheckIn: Int!, $shortID: String) {
     checkIn(order: $order, orderShortID: $shortID, amountToCheckIn: $amountToCheckIn ) {
         id
         buyer
